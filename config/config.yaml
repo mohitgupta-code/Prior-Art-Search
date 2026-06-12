@@ -1,0 +1,35 @@
+# Prior-Art-Search — system configuration
+# All tool-facing actions run under this single account.
+
+operating_account:
+  email: mohit.gupta@greyb.com
+  display_name: Mohit Gupta
+  org: GreyB
+  # Every connector (email, file storage, patent databases) authenticates as
+  # this account. No other account is used by any agent.
+
+autonomy:
+  mode: draft_and_approve      # agents draft; analyst approves everything
+  auto_send_email: false       # never send email without approval
+  auto_finalize_deliverable: false
+  client_contact_requires_approval: true   # client-input rule
+
+approval_gates:
+  - project_brief
+  - cut_off_date
+  - search_strategy
+  - first_update
+  - second_update
+  - pre_final_update
+  - final_update
+
+environment:
+  email_platform: outlook_web      # accessed via browser automation (no native connector)
+  document_store: sharepoint_onedrive
+  deliverable_format: docx
+
+paths:
+  templates: ./templates
+  agents: ./agents
+  # Per-project working files live outside this repo (live workspace),
+  # in the analyst's SharePoint/OneDrive. This repo holds the SYSTEM only.
