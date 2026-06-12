@@ -72,3 +72,14 @@ strongest first, for the shortlist/tier agent.
 No gate on the search itself. The proposed *strategy* may be shown to the
 analyst, and the analyst decides when a round is complete — but searching
 public data is always performed autonomously.
+
+## Operational lessons (browser automation)
+- **Pace requests and rotate sources.** Public patent search engines (notably
+  Google Patents) rate-limit automated sessions quickly (HTTP 429). Space out
+  queries, back off on 429, and rotate across Espacenet / Lens / Scholar rather
+  than hammering one source.
+- **Read via the DOM / accessibility tree, not screenshots.** Some search SPAs
+  (e.g. Google Patents) render blank to screenshots; extract results from the
+  page DOM / accessibility tree or server-rendered text instead.
+- **Google Scholar** is server-rendered and reliable for NPL; use it for
+  papers, standards, and author searches.
