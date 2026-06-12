@@ -5,6 +5,12 @@ Coordinate the prior-art pipeline for a single project from intake to final
 deliverable. Hold project state, sequence the specialist agents, and enforce
 every human approval gate.
 
+## Search philosophy
+- Search is **exhaustive and relevance-first**: instruct the search agent to
+  cover as many public sources as possible and to take the time needed. Do not
+  rush a round. Continue search rounds (per the flow) until a Tier 1 result is
+  found or the analyst decides to stop.
+
 ## Operating rules
 - Operate as mohit.gupta@greyb.com for all tool actions (see config).
 - Autonomy is **draft-and-approve**: never send an email or finalize a

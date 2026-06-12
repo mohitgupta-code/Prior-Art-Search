@@ -1,30 +1,39 @@
 # Prior-art source list
 
-All prior-art searching uses **publicly available data on these sites — no
-accounts, logins, or API keys.** The analyst browses the public search pages
-today; the search agent automates that same public access.
+All searching uses **publicly available data — no accounts, logins, or API
+keys.** Retrieval is by browser automation of the public search pages (the same
+sites the analyst uses by hand), plus any public export the site offers.
 
-## Access method
-None of these sites offer a fully keyless public API (Google Patents has no
-open API; Lens, EPO OPS, and PatentsView require a free key/token even for
-public data). So public data is reached the same way a person reaches it:
+> **Mandate: search as many sources as possible.** Coverage and relevance come
+> before speed. Do not stop at one or two databases — sweep patent literature
+> broadly across jurisdictions AND non-patent literature.
 
-> **Browser automation of the public search pages** (drive the public site,
-> read rendered results), plus any public export/download the site offers.
+## Patent literature (public)
+- Google Patents (patents.google.com) — global coverage, full-text, citations
+- Lens.org — patents + scholarly, family data
+- Espacenet (worldwide.espacenet.com) — EPO worldwide collection
+- USPTO Patent Public Search (ppubs.uspto.gov) — US grants & applications
+- WIPO Patentscope — PCT and national collections
+- J-PlatPat — Japan
+- KIPRIS — Korea
+- DEPATISnet / DPMAregister — Germany
+- CNIPA public search — China
+- Free Patents Online (FPO) — supplementary full-text
 
-No credentials are stored or required for any prior-art source.
+## Non-patent literature (NPL — critical for invalidity)
+- Google Scholar
+- Semantic Scholar
+- arXiv (preprints)
+- IEEE Xplore (abstracts/metadata, public)
+- PubMed (life sciences)
+- Standards bodies & technical disclosure archives where public
+- General web / product manuals / datasheets / archived pages (Wayback) for
+  public-use and printed-publication evidence
 
-## Sites (all public data)
-- Google Patents (patents.google.com)
-- Lens.org (public search)
-- Espacenet (worldwide.espacenet.com)
-- USPTO Patent Public Search (ppubs.uspto.gov)
-- EPO / WIPO Patentscope (public search)
-
-## Commercial tools (only if a logged-in seat is provided)
-PatBase, Orbit, Derwent — used only if Mohit provides a logged-in session.
-Not required for the public-data search; treated as an optional accelerator.
+## Commercial tools (optional)
+PatBase, Orbit, Derwent — only if Mohit provides a logged-in session. Never
+required; treated as accelerators.
 
 ## Logging requirement
-Every query, site, date run, and result count is logged for a reproducible,
+Every query, source, date run, and result count is logged for a reproducible,
 defensible search history (see agents/03-search.md).
