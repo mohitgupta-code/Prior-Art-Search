@@ -1,20 +1,29 @@
 # Tiering definitions
 
-> PLACEHOLDER — confirm with Mohit and replace with his exact practice.
+Prior-art references are classified into three tiers by how much of the claim
+they cover. Tier assignment is always made against specific claim elements
+(see the claim matrix from agents/04 and agents/05) and only counts references
+dated before the established cut-off date.
 
 ## Tier 1 (T1)
-A single reference that, on its own, appears to anticipate (disclose every
-element of) at least one independent claim of the subject patent, with a
-publication/priority date before the established cut-off date.
+References that **completely overlap with / invalidate the claim** — a single
+reference that discloses the claim in full (anticipatory; reads on every element
+of the claim).
 
 ## Tier 2 (T2)
-A reference that discloses a substantial subset of claim elements and is a
-strong candidate for an obviousness combination, OR a highly relevant
-reference for one or more key features but not anticipatory alone.
+References that **disclose the novel aspect(s) of the claim** — the
+distinguishing, inventive features — even if they do not cover the whole claim.
+Strong candidates for an obviousness combination.
 
-## Out of scope
-References after the cut-off date, or with low relevance to the mapped claim
-elements, are logged in the search history but not shortlisted.
+## Tier 3 (T3)
+References that **disclose only the trivial / conventional features of the
+claim** — background or well-known elements, not the novel aspect. Tracked for
+completeness but generally not the focus of the analysis.
 
-Each shortlisted reference must map to specific claim elements (see the
-claim matrix produced by agents/04 and agents/05).
+## Deliverables
+- The claim matrix in each Update covers **Tier 1 and Tier 2** references.
+- Tier 3 references are recorded in the search history / bibliography but are
+  not normally charted.
+- The final claim chart is built for the **Tier 1** reference(s).
+
+> Confirm with Mohit if Tier 3 should ever appear in the matrix.
