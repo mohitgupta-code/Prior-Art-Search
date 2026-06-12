@@ -5,8 +5,8 @@ operating_account:
   email: mohit.gupta@greyb.com
   display_name: Mohit Gupta
   org: GreyB
-  # Every connector (email, file storage, patent databases) authenticates as
-  # this account. No other account is used by any agent.
+  # Used for email and file storage. Prior-art search does NOT use this (or any)
+  # account — it reads public website data only (see prior_art_search below).
 
 autonomy:
   mode: draft_and_approve      # agents draft; analyst approves everything
@@ -22,6 +22,11 @@ approval_gates:
   - second_update
   - pre_final_update
   - final_update
+
+prior_art_search:
+  access: public_data_only         # public website data; NO accounts, logins, or API keys
+  method: browser_automation       # drive the public search pages, read rendered results
+  credentials_required: false
 
 environment:
   email_platform: outlook_web      # accessed via browser automation (no native connector)

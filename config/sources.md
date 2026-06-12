@@ -1,23 +1,30 @@
 # Prior-art source list
 
-Searches run across a hybrid layer. How each source is reached differs.
+All prior-art searching uses **publicly available data on these sites — no
+accounts, logins, or API keys.** The analyst browses the public search pages
+today; the search agent automates that same public access.
 
-## API-automatable (agents query directly)
-- Google Patents (incl. BigQuery public datasets)
-- Lens.org
-- EPO Open Patent Services (OPS)
-- USPTO (PatentsView / PEDS / Patent Public Search APIs)
+## Access method
+None of these sites offer a fully keyless public API (Google Patents has no
+open API; Lens, EPO OPS, and PatentsView require a free key/token even for
+public data). So public data is reached the same way a person reaches it:
 
-## Browser-driven (logged-in session, best effort)
-- PatBase
-- Orbit (Questel)
-- Derwent Innovation
-- Espacenet
+> **Browser automation of the public search pages** (drive the public site,
+> read rendered results), plus any public export/download the site offers.
 
-## Manual paste-in (fallback)
-- Any commercial tool where automation is brittle: the agent prepares the
-  query set; the analyst runs it and pastes exported results back.
+No credentials are stored or required for any prior-art source.
+
+## Sites (all public data)
+- Google Patents (patents.google.com)
+- Lens.org (public search)
+- Espacenet (worldwide.espacenet.com)
+- USPTO Patent Public Search (ppubs.uspto.gov)
+- EPO / WIPO Patentscope (public search)
+
+## Commercial tools (only if a logged-in seat is provided)
+PatBase, Orbit, Derwent — used only if Mohit provides a logged-in session.
+Not required for the public-data search; treated as an optional accelerator.
 
 ## Logging requirement
-Every query, source, date, and result count is logged for a reproducible,
+Every query, site, date run, and result count is logged for a reproducible,
 defensible search history (see agents/03-search.md).
