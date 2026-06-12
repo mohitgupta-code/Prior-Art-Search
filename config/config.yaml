@@ -25,8 +25,14 @@ approval_gates:
 
 prior_art_search:
   access: public_data_only         # public website data; NO accounts, logins, or API keys
-  method: browser_automation       # drive the public search pages, read rendered results
   credentials_required: false
+  run_without_confirmation: true   # read-only public search; never ask permission to search
+  tool_agnostic: true              # use whatever the host LLM/agent provides
+  capabilities:                    # in order of preference
+    - browser_automation           # e.g. Claude in Chrome (navigate + read page)
+    - web_search                   # any web-search tool, if available
+    - page_fetch                   # direct fetch of specific known URLs
+  method: extensive_public_search  # broad multi-source sweep + iterative deepening
 
 environment:
   email_platform: outlook_web      # accessed via browser automation (no native connector)

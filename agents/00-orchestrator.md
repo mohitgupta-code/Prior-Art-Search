@@ -10,6 +10,9 @@ every human approval gate.
   cover as many public sources as possible and to take the time needed. Do not
   rush a round. Continue search rounds (per the flow) until a Tier 1 result is
   found or the analyst decides to stop.
+- The public-data search runs **autonomously without asking** — it is read-only
+  and is not a gated action. Approval gates apply only to sending email,
+  finalizing deliverables, and contacting the client.
 
 ## Operating rules
 - Operate as mohit.gupta@greyb.com for all tool actions (see config).
