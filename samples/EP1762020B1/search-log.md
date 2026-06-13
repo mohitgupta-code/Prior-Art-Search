@@ -31,3 +31,38 @@
 - Google Patents rate-limits automated sessions quickly → pace requests, rotate sources, back off.
 - That SPA renders blank to screenshots → read via DOM/accessibility tree, not screenshots.
 - Google Scholar is server-rendered and reliable via page-text extraction.
+
+## Deeper dig (examiner-grade sources)
+- **Patentscope (WO2005125047)** — accessible. Confirmed priority 16.06.2004.
+  CPC fingerprint of the invention (use these for classification search):
+  - H04L69/08 — protocols for interworking / protocol conversion
+  - H04L69/22 — header parsing or analysis
+  - H04L27/0012 — arrangements for identifying the type of modulation
+  - H04L1/0025 — transmission of mode-switching indication
+  - H04L5/1438 — negotiation of transmission parameters prior to communication
+  - H04W84/18 — self-organising / ad-hoc networks
+  - H04W28/26 — resource reservation
+- **EPO Register & Espacenet** — behind bot-verification; not scraped (do not bypass bot detection).
+- **Patentscope Documents tab (ISR)** — did not render via automation; the
+  International Search Report (X/Y citations) still needs manual retrieval.
+
+## Key professional conclusion
+EP1762020B1 was **granted with the "common part" characterizing feature intact**.
+That strongly implies the examiner found **no single anticipatory (X) reference**
+disclosing that feature — otherwise claim 1 would not have granted as is.
+Therefore an explicit Tier-1 is unlikely to exist within the examiner's own cited
+art; a clean T1 most likely requires **new prior art not before the examiner**
+that discloses ALL of: distributed control + two formats/modes + a shared common
+part decodable in either mode + carrying upcoming-transmission info.
+
+On evidence gathered, the strongest realistic position is an **obviousness
+combination**; the closest single-reference lead remains the **IEEE 802.11g draft
+(nonERP RTS/CTS + CCK-OFDM hybrid)**.
+
+## Concrete next steps to settle the T1 question
+1. Retrieve the **WO2005125047 International Search Report** (lists the examiner's
+   X/Y references) — easiest if Mohit opens the ISR PDF, as with the paper.
+2. **Classification search** in H04W84/18 × (H04L27/0012 OR H04L1/0025 OR
+   H04L69/08), capped at 2004-06-16 — examiner-style; needs an un-rate-limited
+   patent search (API/seat) or Espacenet access.
+3. Fully **chart the IEEE 802.11g draft (D3.0, July 2002)** against claim 1.
